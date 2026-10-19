@@ -72,7 +72,7 @@ class Clock(tk.Tk):
         c = self.canvas
         c.delete("dynamic")
         now = datetime.now()
-        h, m, s = now.hour % 12, now.minute, now.second + now.microsecond / 1e6
+        h, m, s = now.hour % 12, now.minute, now.second
 
         hour_a = (h + m / 60 + s / 3600) * 30
         min_a = (m + s / 60) * 6
